@@ -129,11 +129,11 @@ bool hapusHalaman(DNode*& head, DNode*& tail, int nomor) {
         head = nullptr;
         tail = nullptr;
     } else if (curr == head){
-        head = head->prev;
+        head = head->next;
         head->prev = nullptr;
     } else if (curr == tail){
         tail = tail->prev;
-        tail->prev = nullptr;
+        tail->next = nullptr;
     } else{
         curr->prev->next = curr->next;
         curr->next->prev = curr->prev;
